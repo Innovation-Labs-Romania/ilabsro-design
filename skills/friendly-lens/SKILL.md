@@ -1,7 +1,7 @@
 ---
 name: friendly-lens
 description: Apply a warm, clear and conversational Innovation Labs tone without changing facts, structure or visual direction.
-version: 0.2.0
+version: '0.2.0'
 ---
 
 # Friendly lens

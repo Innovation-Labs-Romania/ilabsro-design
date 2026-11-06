@@ -1,7 +1,7 @@
 ---
 name: human-pass
 description: Final copy and design check for Innovation Labs output. Strips AI fingerprints, flags IL voice rules and scans pages for visual AI tells. Use before showing any draft.
-version: 0.1.0
+version: '0.1.0'
 ---
 
 # Innovation Labs Human Pass

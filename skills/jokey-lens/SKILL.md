@@ -1,7 +1,7 @@
 ---
 name: jokey-lens
 description: Add restrained, smart playfulness to Innovation Labs copy when the audience allows it, without changing facts or turning the work into comedy.
-version: 0.2.0
+version: '0.2.0'
 ---
 
 # Jokey lens

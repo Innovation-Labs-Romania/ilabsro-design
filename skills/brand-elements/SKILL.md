@@ -1,7 +1,7 @@
 ---
 name: brand-elements
 description: Optional Innovation Labs visual modifier that selects the semantic accent, an approved branded ground and one meaningful official IL decorative element.
-version: 0.4.0
+version: '0.4.0'
 ---
 
 # Innovation Labs Brand Elements

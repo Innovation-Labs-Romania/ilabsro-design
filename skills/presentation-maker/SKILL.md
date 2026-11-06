@@ -1,17 +1,31 @@
 ---
 name: presentation-maker
 description: Turn Innovation Labs strategy or program material into a pitch-like route-aware presentation using the IL v0.4 design system and links to deeper source material.
-version: 0.4.1
+version: '0.6.0'
 ---
 
 # Innovation Labs Presentation Maker
 
 Use when the user asks for a strategy presentation, pitch-style story, live deck or guided narrative.
 
+## Course and workshop decks
+
+When the deck is for a room of learners (a course module, workshop, bootcamp session or class), switch to course mode. The pitch rules below still hold for voice and source fidelity; the format comes from the course system instead.
+
+1. Read `../../design-system/COURSE_DECKS.md` and `../../assets/course-deck/README.md`.
+2. Start from `../../assets/course-deck/starter.html`. Keep its frame and replace every slide and data constant.
+3. Pick patterns by ID (P01 to P35). Every module opens with the route cover (P01), the passport (P27) and the loop (P16), and closes with you decide (P30), the reflection (P31), log it, stamp it (P32) and the next-week closer (P33).
+4. Night only. Balloons as bullets, step-by-step reveals, at least one game per theory block, and examples on several made-up people with a shuffle.
+5. For a module of the IL27 master's course, hand over to `course-module-maker`, which also makes the prep guide and the session plan.
+6. When the deck is built on one of Flavia's existing decks, keep her original pages in their original style and add the new material next to them. A rebuild once removed the VSFA story slides and they had to be restored.
+7. Pace for the room: people don't deep dive much. Favour examples over theory, and don't add everything that could fit.
+8. Before every publish, run the deck check in `../../design-system/WORKING_RULES.md` (node syntax check, Playwright at 1920, 1440, 1024, 390, 360 and phone landscape), then publish to the same URL.
+
 ## Before building
 
 1. Read `../../design-system/INNOVATION_LABS_DESIGN_SYSTEM.md`, `../../design-system/TOKENS.css` and `../../design-system/BRAND_ELEMENTS.md`.
    Read `../../design-system/AI_TELLS.md`: the patterns Innovation Labs never ships (generic icon tiles, emoji, glassmorphism, em dashes, Inter/Geist/Space Grotesk, three feature cards, bento grids, fake terminals, "it's not X, it's Y", placeholder demos, purple-on-black, glow orbs, dot grids, sparkles, arrow-nudge CTAs, big hover motion, rainbow color). Before delivering, run `python3 ../human-pass/scripts/design_tells.py <output>` and fix every finding that isn't a documented IL exception.
+   Read `../../design-system/WORKING_RULES.md`: the team's standing corrections (no invented facts or counts, consent before naming people, match the established reference artifact, read live artifacts before editing, look at the output before showing it).
 2. Read `references/pitch-structure.md`.
 3. Ground every factual claim in supplied source material.
 4. If a Strategy Hub URL is supplied, plan a clear final/recurring path into it.
@@ -131,6 +145,7 @@ Do not reuse a historical artifact URL from source/reference material as the fin
 ## References
 
 - `references/pitch-structure.md`
+- `../../design-system/COURSE_DECKS.md` and `../../assets/course-deck/starter.html` for course and workshop decks
 - `examples/index.html` as the current v0.4 route-first reference implementation, including portrait/landscape adaptation, accent switching and optional `Lead the room` behavior.
 
 ## Bundled examples

@@ -2,7 +2,7 @@
 
 Innovation Labs design and content plugin for creating consistent websites, presentations, one-pagers, social content, standalone visuals and source-grounded content plans.
 
-**Plugin version:** `v0.7.0`
+**Plugin version:** `v0.9.0`
 
 The project packages Innovation Labs visual language, reusable brand elements, artifact-making skills, content planning and voice guidance into one working system.
 
@@ -18,7 +18,7 @@ The Claude-distributed plugin is designed to be usable without access to the ful
 
 The runtime package includes:
 
-- the 12 plugin skills under `skills/`;
+- the 17 plugin skills under `skills/`;
 - the portable Innovation Labs design system under `design-system/`;
 - shared reusable brand assets under `assets/`;
 - validated capability references under `generated-examples/`;
@@ -46,7 +46,10 @@ Current source material, the current request and the current skill rules always 
 - standalone explanatory visuals;
 - source-grounded content plans and briefs;
 - reusable Innovation Labs brand elements;
-- tone adaptation through voice lenses.
+- tone adaptation through voice lenses;
+- course and workshop modules (student deck, prep guide, session plan, challenger and exit skills, classroom games);
+- the flying pig mascot, kept consistent across formats;
+- updates to the Innovation Labs Artifact Index.
 
 Generated and validated examples live in:
 
@@ -56,7 +59,7 @@ Generated and validated examples live in:
 
 ## Skills
 
-The plugin currently contains **12 skills**.
+The plugin currently contains **17 skills**.
 
 ### Artifact makers
 
@@ -146,6 +149,30 @@ Companion plugin: **`ilabsro-instagram`** decides what to post, when and with wh
 #### `human-pass`
 
 A final copy check for every output maker. It strips machine fingerprints (invisible characters, em dashes, stock phrases) and flags the Innovation Labs voice rules: no exclamation marks, no emoji, sentence case, no hype or certainty claims the source doesn't support. The scripts are adapted from the MIT-licensed `instagram-agent-skill` by Jake Schincariol (license file included). They run locally on Python 3 and upload nothing.
+
+### Course kit
+
+#### `course-module-maker`
+
+Builds one course module as a set of three artifacts that agree with each other: the night student deck, the prep guide for the course team and the session plan. Course facts for the IL27 master's pilot live in `skills/course-module-maker/references/course.md`.
+
+#### `course-skill-pair-maker`
+
+Writes the challenger and exit skills for a module, packages each as a skill zip plus a copy-paste prompt, and wires them into the deck.
+
+#### `classroom-games`
+
+Adds classroom interactions to a course or workshop deck: bingo, real or fake, sticky walls, sort quizzes, example switchers, fill-in sentences, timed chip picks, a problem market and lesson steppers.
+
+### Shared system skills
+
+#### `pig-mascot`
+
+Keeps the flying pig consistent across decks, Reels, posts and pages, using the Pig Studio as the single source.
+
+#### `artifact-index-updater`
+
+Adds new artifacts to the Innovation Labs Artifact Index with real previews and republishes the index to the same URL.
 
 ---
 
@@ -242,7 +269,7 @@ The current design-system token version may remain different from the plugin ver
 For example:
 
 ```text
-Plugin: v0.5.1
+Plugin: v0.9.0
 Design system / portable tokens: v0.4
 ```
 
@@ -468,6 +495,7 @@ ilabsro-design/
 │   └── logos/
 │
 ├── design-system/
+│   ├── WORKING_RULES.md      (the team's standing corrections, v0.9.0)
 │   └── ...
 │
 ├── skills/
@@ -482,7 +510,12 @@ ilabsro-design/
 │   ├── brand-elements/
 │   ├── formal-lens/
 │   ├── friendly-lens/
-│   └── jokey-lens/
+│   ├── jokey-lens/
+│   ├── course-module-maker/
+│   ├── course-skill-pair-maker/
+│   ├── classroom-games/
+│   ├── pig-mascot/
+│   └── artifact-index-updater/
 │
 ├── generated-examples/
 │   ├── website/
@@ -621,12 +654,12 @@ Validation is about whether the artifact is useful as a reference for the system
 
 Current plugin version:
 
-`v0.5.1`
+`v0.9.0`
 
 Current plugin scope:
 
 ```text
-12 skills
+17 skills (including the course kit, pig mascot and artifact index updater)
 16 shared SVG brand elements
 rendered Reels (MP4) via the IL Reel Kit
 multiple artifact formats
