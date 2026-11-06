@@ -1,7 +1,7 @@
 ---
 name: insta-post-maker
 description: Create simple, shareable Innovation Labs social assets using photo-led, graphic or custom-illustration art direction while preserving approved content boundaries.
-version: 0.5.1
+version: '0.6.0'
 ---
 
 # Innovation Labs Insta Post Maker
@@ -18,9 +18,32 @@ The output must feel editorial, human, recognizably IL and social-native. It sho
 2. Read `../../design-system/TOKENS.css`.
 3. Read `../../design-system/BRAND_ELEMENTS.md`.
    Read `../../design-system/AI_TELLS.md`: the patterns Innovation Labs never ships (generic icon tiles, emoji, glassmorphism, em dashes, Inter/Geist/Space Grotesk, three feature cards, bento grids, fake terminals, "it's not X, it's Y", placeholder demos, purple-on-black, glow orbs, dot grids, sparkles, arrow-nudge CTAs, big hover motion, rainbow color). Before delivering, run `python3 ../human-pass/scripts/design_tells.py <output>` and fix every finding that isn't a documented IL exception.
-4. Ground every factual claim in the user's supplied material. Never invent names, quotes, winners, numbers or outcomes.
-5. Study `references/social-2026/` for composition behavior, not literal layouts.
-6. If `brand-elements` is selected, treat it as a modifier for accent, branded ground and official shared assets.
+4. Read `../../design-system/WORKING_RULES.md`. Before naming or quoting anyone, check consent in the source sheet with its comments.
+5. Ground every factual claim in the user's supplied material. Never invent names, quotes, winners, numbers or outcomes.
+6. Look for the team's established reference artifact for this kind of post and match it before inventing a new style (see `Standing rules from the team`).
+7. Study `references/social-2026/` for composition behavior, not literal layouts.
+8. If `brand-elements` is selected, treat it as a modifier for accent, branded ground and official shared assets.
+
+## Standing rules from the team
+
+Added in v0.9.0 from Flavia's corrections on real posts.
+
+- **English.** Posts are written in English, even when feedback arrives in Romanian.
+- **Logo instead of the name.** Where the words "Innovation Labs" would appear on a frame, use the logo instead.
+- **No frame numbering, ever.** No "2 / 8" or similar counters on posts, carousels or any design.
+- **No blurred star element.**
+- **Pig on the first slide shows its head,** not its rear. For the pig itself, follow `../pig-mascot/SKILL.md`.
+- **Match the established style.** When a post belongs to a series that already exists (for example the "journey" style: paper cards, handwritten labels, hills, flying pig), match that artifact and reuse its exact assets.
+- **A pattern the team liked:** a story-style carousel where one pig flies continuously across the swipes.
+- **Event names.** The 24–25 Oct 2026 event is "AI Validation Bootcamp SiSC" in every post, never "SiSC hackathon".
+- **LinkedIn variant.** LinkedIn gets its own cleaner style: more serious and professional, fewer pigs, less color, some IL brand elements.
+- **Video from a post.** No music. Hold every text block long enough to read. To animate an artboard, drive it with a function that sets DOM styles for a given time, capture frames with Playwright, then encode to MP4. For a real Reel, use `reels-maker`.
+
+### Working on a Design canvas
+
+- Uploaded SVGs lose their fills. Rasterize brand elements and pigs to PNG before uploading, and keep the logo as inline `currentColor` SVG.
+- Reuse asset IDs across boards instead of uploading the same file again.
+- Boards can't be deleted from a published canvas. To clean up, make a new canvas with only the boards to keep.
 
 ## Core goal
 
@@ -271,6 +294,8 @@ Preferred social-only mascots:
 - `flying-purple-pig.png`
 
 Use them for playful possibility, community, daring/absurdity or a deliberately light moment. Do not use a pig randomly because it is available.
+
+These two PNGs are the older flat pigs. For the redrawn pig cast (outfits, held items, moves) use `../pig-mascot/SKILL.md` and the Pig Studio.
 
 The other PNGs currently present in this local folder are legacy raster compatibility assets. Prefer the shared v0.4 SVG equivalents in `../../assets/brand-elements/` when an equivalent exists.
 

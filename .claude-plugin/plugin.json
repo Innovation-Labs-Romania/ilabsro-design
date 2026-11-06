@@ -1,8 +1,8 @@
 {
   "name": "ilabsro-design",
   "displayName": "Innovation Labs Design",
-  "version": "0.7.0",
-  "description": "Portable Innovation Labs design and content plugin for websites, presentations, one-pagers, social posts and carousels, rendered Instagram Reels (MP4), source-grounded content planning, custom brand visuals, brand elements, tone lenses and a human-pass copy check.",
+  "version": "0.9.0",
+  "description": "Innovation Labs design system and production skills: websites, presentations, one-pagers, social posts and carousels, rendered Instagram Reels (MP4), source-grounded content planning, custom brand visuals, brand elements, tone lenses and a human-pass copy check, plus the course kit (course module maker, challenger and exit skill pair maker, classroom games), the pig mascot and the artifact index updater.",
   "author": {
     "name": "Innovation Labs"
   },
@@ -19,6 +19,8 @@
     "reels",
     "video",
     "instagram",
-    "motion"
+    "motion",
+    "course",
+    "classroom"
   ]
 }

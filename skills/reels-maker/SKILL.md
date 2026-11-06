@@ -1,7 +1,7 @@
 ---
 name: reels-maker
 description: Create educational and promotional Innovation Labs Instagram Reels as review-ready 9:16 MP4s, using hook-first storytelling, text-on-screen, human-first motion and teal-led branding.
-version: 0.7.0
+version: '0.8.0'
 ---
 
 # Innovation Labs Reels Maker
@@ -20,6 +20,7 @@ Do not turn this into a two-template Reel generator. **Chat and handwritten are 
 2. Read `../../design-system/TOKENS.css` for exact Light-mode color tokens and contrast constraints.
 3. Read `../../design-system/BRAND_ELEMENTS.md` for official shared assets and their appropriate use.
    Read `../../design-system/AI_TELLS.md`: the patterns Innovation Labs never ships (generic icon tiles, emoji, glassmorphism, em dashes, Inter/Geist/Space Grotesk, three feature cards, bento grids, fake terminals, "it's not X, it's Y", placeholder demos, purple-on-black, glow orbs, dot grids, sparkles, arrow-nudge CTAs, big hover motion, rainbow color). Before delivering, run `python3 ../human-pass/scripts/design_tells.py <output>` and fix every finding that isn't a documented IL exception.
+   Read `../../design-system/WORKING_RULES.md`: the team's standing corrections (no invented facts or counts, consent before naming people, match the established reference artifact, read live artifacts before editing, look at the output before showing it).
 4. Read the relevant voice modifier when needed: `../friendly-lens/SKILL.md`, `../formal-lens/SKILL.md` or `../jokey-lens/SKILL.md`.
 5. If the brief comes from `content-planner`, preserve approved angle, audience, evidence limits, claims and CTA. If the user asks directly for a Reel and provides a usable topic, proceed without forcing a separate planning step.
 6. If the user provides a visual reference, analyze its composition, timing, scene construction and animation behavior. Adapt those mechanics into the IL design system; **do not copy its off-brand palette, typography, UI or unsupported claims**.
@@ -228,7 +229,15 @@ Default stays the kit. Never pick Motion "to look expensive".
 A Reel ships with more than the video:
 - **Caption draft.** The first ~125 characters carry the hook, because that is what shows before "more". Use plain IL voice: no hashtag walls (0–3 relevant tags at most), no follow/tag bait, and one action at most. The quiet source/evidence note may live here when it is not content-critical. Run it through `human-pass`.
 - **Cover.** `render.mjs --cover <t>` chooses the frame. Check `<name>.cover-4x5.jpg`: the profile grid shows that centre crop, so the hook must read inside it.
-- **Audio.** The MP4 is silent by design. If the team wants music, add it at publish time from Instagram's in-app audio library, where licensing is handled by the platform. Never bake in unlicensed tracks.
+- **Audio.** The MP4 is silent by design, and the team's standing rule is no music in IL videos. Don't suggest adding music. Only if someone explicitly asks for it, it goes in at publish time from Instagram's in-app audio library, where licensing is handled by the platform. Never bake in unlicensed tracks.
+
+## Standing rules from the team (v0.9.0)
+
+- **Finished pieces, not sketches.** When the team picks an idea from a list, deliver a full, usable Reel. Five of ten "new idea" sketches were once rejected as "too short, not usable, don't make sense".
+- **One page for a set.** When several Reels go out for review, embed them all on one artifact page so it needs one share, instead of one link per Reel.
+- **English** on screen and in captions, even when feedback arrives in Romanian.
+- **No frame or step numbering** ("2 / 8") on screen.
+- **The pig** follows `../pig-mascot/SKILL.md`.
 
 ## Reels log
 

@@ -1,7 +1,7 @@
 ---
 name: content-planner
 description: "Extract and evaluate source-grounded Innovation Labs content opportunities, then turn a human-selected idea and format into a structured downstream brief."
-version: "0.1.2-draft"
+version: "0.1.3-draft"
 ---
 
 # Innovation Labs Content Planner
@@ -37,6 +37,8 @@ The skill has two modes:
 Do not jump directly from raw source material to final social copy or visual execution.
 
 ## 2. Rules that outrank everything else
+
+Also read `../../design-system/WORKING_RULES.md`: no invented deadlines or counts, say when a claim comes from memory, check consent before naming or quoting anyone.
 
 1. **Source fidelity over creativity.** Preserve the meaning, nuance, status and limitations of the source.
 2. **No paraphrase inflation.** Do not create several themes that are the same strategic point rewritten in different words.

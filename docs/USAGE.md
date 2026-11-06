@@ -81,6 +81,8 @@ The main output skills are:
 - `one-pager-maker` — one-page explainers and partner briefs;
 - `insta-post-maker` — social posts and carousels.
 - `reels-maker` — educational and promotional Instagram Reels, rendered to MP4 with the bundled IL Reel Kit (needs Node, Playwright/Chromium and ffmpeg).
+- `course-module-maker` — one course or workshop module: student deck, prep guide and session plan.
+- `course-skill-pair-maker` — the challenger and exit skills for a module.
 
 You may name the skill explicitly, but you can also describe the desired result and let Claude choose the appropriate one.
 
@@ -92,7 +94,12 @@ Use:
 - `formal-lens`, `friendly-lens` or `jokey-lens` when the voice matters;
 - `human-pass` as the final copy check before a draft is shown;
 - `brand-image-maker` when the artifact needs a custom diagram, illustration or visual concept;
-- `brand-elements` when reusable Innovation Labs visual assets or branded treatments are useful.
+- `brand-elements` when reusable Innovation Labs visual assets or branded treatments are useful;
+- `classroom-games` to make a course slide interactive;
+- `pig-mascot` whenever the flying pig appears;
+- `artifact-index-updater` to add finished artifacts to the Artifact Index.
+
+The output makers and the course skills also follow `design-system/WORKING_RULES.md`, the team's standing corrections. The voice lenses don't need it.
 
 Do not stack skills just because they exist. The simplest combination that solves the task is usually better.
 
